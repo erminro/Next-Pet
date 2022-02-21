@@ -5,9 +5,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import { useDispatch } from 'react-redux';
-import moment from 'moment';
 import { useHistory } from 'react-router-dom';
-
 import { likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
@@ -18,8 +16,8 @@ const Post = ({ post, setCurrentId }) => {
   const history = useHistory();
   const classes = useStyles();
 
-  const userId = user?.result.googleId || user?.result?._id;
-  const hasLikedPost = post.likes.find((like) => like === userId);
+    const userId = (user?.result.googleId || user?.result?._id) ;
+    const hasLikedPost = post.likes.find((like) => like === userId) ;
 
   const handleLike = async () => {
     dispatch(likePost(post._id));
@@ -89,7 +87,7 @@ const Post = ({ post, setCurrentId }) => {
         <Button size="small" color="primary" disabled={!user?.result} onClick={handleLike}>
           <Likes />
         </Button>
-        {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
+              {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator)&& (
           <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
             <DeleteIcon fontSize="small" /> &nbsp; Delete
           </Button>

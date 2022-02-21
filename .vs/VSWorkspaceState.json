@@ -4,13 +4,13 @@
     "\\client",
     "\\client\\src",
     "\\client\\src\\components",
-    "\\client\\src\\components\\CreatorOrTag",
+    "\\client\\src\\components\\Navbar",
+    "\\client\\src\\images",
     "\\server",
     "\\server\\controllers",
     "\\server\\middleware",
-    "\\server\\models",
-    "\\server\\routes"
+    "\\server\\models"
   ],
-  "SelectedNode": "\\client\\src\\components\\Auth\\styles.js",
+  "SelectedNode": "\\client\\src\\components\\Navbar\\Navbar.js",
   "PreviewInSolutionExplorer": false
 }
